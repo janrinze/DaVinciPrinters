@@ -1,0 +1,5 @@
+#!/bin/bash
+
+out=${1%%.gcode}.3w
+
+davinciconvert $1 |openssl base64 -out $out
