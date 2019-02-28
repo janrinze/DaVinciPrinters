@@ -1,0 +1,8 @@
+#!/bin/bash
+
+out=${1%%.gcode}.3w
+gout=${1%%.gcode}.duo.gcode
+
+davinciduoconvert $1 |openssl base64 -out $out
+davinciduoconvert $1 > $gout
+
